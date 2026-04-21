@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disponibilidad | Triloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Triloga</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="staff_dashboard.html" class="nav-link">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="huespedes.html" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Huéspedes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="reservaciones.html" class="nav-link">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Reservas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="disponibilidad.html" class="nav-link active">
+            <i class="fa-solid fa-check-to-slot"></i>
+            <span>Disponibilidad</span>
+          </a>
+        </li>
+        <li
+          class="nav-item"
+          style="
+            margin-top: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1rem;
+          "
+        >
+          <a href="index.html" class="nav-link" style="color: var(--danger)">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Cerrar Sesión</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <h1 class="page-title">Consultar Disponibilidad</h1>
+      </header>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Filtros de Búsqueda</h2>
+        </div>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Desde (Check-in)</label>
+              <input type="date" class="form-control" value="2026-03-01" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Hasta (Check-out)</label>
+              <input type="date" class="form-control" value="2026-03-07" />
+            </div>
+            <div
+              class="form-group"
+              style="display: flex; align-items: flex-end"
+            >
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="width: 100%; height: 46px; justify-content: center"
+              >
+                <i class="fa-solid fa-search"></i> Buscar Disponibles
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Habitaciones Disponibles en este rango</h2>
+        </div>
+        <p style="margin-bottom: 1rem; color: var(--text-muted)">
+          Mostrando habitaciones libres de reservas *CONFIRMADAS* entre el
+          <strong>01 Mar 2026</strong> y <strong>07 Mar 2026</strong>.
+        </p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Número</th>
+                <th>Tipo</th>
+                <th>Precio / Noche</th>
+                <th>Costo Total (6 Noches)</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

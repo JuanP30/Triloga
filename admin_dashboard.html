@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Dashboard | Triloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Triloga</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="admin_dashboard.html" class="nav-link active">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="habitaciones.html" class="nav-link">
+            <i class="fa-solid fa-bed"></i>
+            <span>Habitaciones</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="reporte.html" class="nav-link">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Reporte Ocupación</span>
+          </a>
+        </li>
+        <li
+          class="nav-item"
+          style="
+            margin-top: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1rem;
+          "
+        >
+          <a href="index.html" class="nav-link" style="color: var(--danger)">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Cerrar Sesión</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <h1 class="page-title">Bienvenido, Admin!</h1>
+        <div class="user-profile">
+          <div class="user-info">
+            <div style="font-weight: 600; font-size: 0.9rem">
+              Carlos Administrador
+            </div>
+            <div class="user-role">ADMINISTRADOR</div>
+          </div>
+          <img
+            src="https://ui-avatars.com/api/?name=Carlos+Admin&background=4361ee&color=fff"
+            alt="User Profile"
+          />
+        </div>
+      </header>
+
+      <div class="stats-grid">
+        <div class="card stat-card">
+          <div class="stat-icon icon-blue">
+            <i class="fa-solid fa-bed"></i>
+          </div>
+          <div class="stat-info">
+            <h3>0</h3>
+            <p>Habitaciones Totales</p>
+          </div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-icon icon-success">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="stat-info">
+            <h3>0</h3>
+            <p>Reservas Activas</p>
+          </div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-icon icon-warning">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3>0</h3>
+            <p>Huéspedes Alojados</p>
+          </div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-icon icon-danger">
+            <i class="fa-solid fa-ban"></i>
+          </div>
+          <div class="stat-info">
+            <h3>0</h3>
+            <p>Cancelaciones Hoy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Reservas Recientes</h2>
+            <a
+              href="reservaciones.html"
+              class="btn btn-outline"
+              style="padding: 0.4rem 0.8rem; font-size: 0.8rem"
+              >Ver Todas</a
+            >
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Huésped</th>
+                  <th>Hab.</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Acciones Rápidas</h2>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 1rem">
+            <a
+              href="habitaciones.html#newRoomModal"
+              class="btn btn-outline"
+              style="justify-content: center"
+            >
+              <i class="fa-solid fa-bed"></i> Añadir Habitación
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

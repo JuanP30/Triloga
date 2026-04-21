@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones | Triloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+      <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-hotel"></i>
+            <span>Triloga</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="admin_dashboard.html" class="nav-link">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="habitaciones.html" class="nav-link active">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Habitaciones</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="reporte.html" class="nav-link">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reporte Ocupación</span>
+                </a>
+            </li>
+            <li class="nav-item" style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem;">
+                <a href="index.html" class="nav-link" style="color: var(--danger);">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="page-header">
+            <h1 class="page-title">Gestión de Habitaciones</h1>
+            <a href="#newRoomModal" class="btn btn-primary">
+                <i class="fa-solid fa-plus"></i> Nueva Habitación
+            </a>
+        </header>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Listado de Habitaciones</h2>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Habitación</th>
+                            <th>Número</th>
+                            <th>Tipo</th>
+                            <th>Precio / Noche</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="newRoomModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="card-title">Registrar Habitación</h3>
+                <a href="#" class="close-btn">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Número de Habitación</label>
+                        <input type="text" class="form-control" placeholder="Ej. 101, 205..." required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Tipo de Habitación</label>
+                        <select class="form-control" required>
+                            <option value="">Seleccione un tipo</option>
+                            <option value="Sencilla">Sencilla</option>
+                            <option value="Doble">Doble</option>
+                            <option value="Suite">Suite</option>
+                            <option value="Presidencial">Presidencial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Precio por Noche (COP)</label>
+                        <input type="number" class="form-control" placeholder="0" min="0" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-outline">Cancelar</a>
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-save"></i> Guardar</a>
+            </div>
+            </div>
+        </div>
+    </div>
+  <script src="js/main.js"></script>
+  </body>
+</html>
